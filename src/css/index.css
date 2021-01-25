@@ -12,16 +12,20 @@ code {
     monospace;
 }
 
-.border{
+.border {
   margin: 4px;
   padding: 4px;
   border: solid red 1px;
 }
 
-.red{
+.red {
   color: red;
 }
 
-.pink{
+.pink {
   color: pink;
+}
+
+.green {
+  color: green;
 }

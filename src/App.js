@@ -1,16 +1,13 @@
 import React from 'react';
-import ContextPage from './pages/ContextPage';
-import ReactReduxPage from './pages/ReactReduxPage';
-import ReduxPage from './pages/ReduxPage';
+import RouterPage from './pages/my-react-router/RouterPage';
+
 
 function App() {
-  // console.log(<input type='password' placeholder='plz type ur password' />)
   return (
     <div className="App">
-      {/* <ReduxPage /> */}
-      {/* <ContextPage /> */}
-      <ReactReduxPage msg='msg' />
+      <RouterPage />
     </div>);
 }
 
 export default App;
+

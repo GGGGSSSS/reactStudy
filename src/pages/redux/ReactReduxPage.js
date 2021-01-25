@@ -1,20 +1,29 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+//这里是consumer provider在最顶层定义
 
 export default connect(
-  //mapStateToProps 把state映射到props
-  // state => ({ num: state }),
+  //mapStateToProps 把redux的值映射到props
   (state, ownProps) => {
     console.log('ownProps', ownProps)
     return {
       count: state
     }
-  }
-  //mapDispatchToProps 把dispatch映射到props
-  ,
+  },
+  //mapDispatchToProps 把redux的dispatch映射到props
   // {
   //   add: () => ({ type: "ADD" })
   // }
+  (dispatch, ownProps) => {
+    console.log('ownProps', ownProps)
+    const res = {
+      add: () => dispatch({ type: "ADD" }),
+      minus: () => dispatch({ type: "MINUS" })
+    }
+    return {
+      dispatch, ...res
+    }
+  }
 )
   (
     class ReactReduxPage extends Component {
